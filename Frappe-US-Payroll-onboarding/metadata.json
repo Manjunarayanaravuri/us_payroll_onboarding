@@ -1,0 +1,5 @@
+{
+  "name": "Frappe Payroll Tax Forms",
+  "description": "An application to manage US employee tax forms for New York, New Jersey, and Florida, designed to integrate with ERPNext v15. It facilitates the collection of federal, state, and local tax information for payroll processing.",
+  "requestFramePermissions": []
+}

@@ -5,3 +5,5 @@
 tags
 node_modules
 __pycache__
+us_payroll_onboarding/public/onboarding_assets/*
+us_payroll_onboarding/www/us_payroll_onboarding/index.html

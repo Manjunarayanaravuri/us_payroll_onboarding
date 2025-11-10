@@ -1,0 +1,29 @@
+{
+  "name": "frappe-payroll-tax-forms",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "tw:dev": "npx @tailwindcss/cli -i ./index.css -o ./output.css --watch",
+    "tw:build": "npx @tailwindcss/cli -i ./index.css -o ./dist/assets/tailwind.css --minify",
+    "build": "yarn tw:build && vite build --base=/assets/us_payroll_onboarding/onboarding_assets/ && yarn copy-html-entry",
+    "copy-html-entry": "cp ../us_payroll_onboarding/public/onboarding_assets/index.html ../us_payroll_onboarding/www/us_payroll_onboarding/index.html",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.1.17",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

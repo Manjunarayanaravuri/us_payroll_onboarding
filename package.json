@@ -1,0 +1,13 @@
+{
+  "name": "us_payroll_onboarding",
+  "version": "1.0.0",
+  "description": "us_payroll_onboarding",
+  "main": "index.js",
+  "scripts": {
+  "build": "cd Frappe-US-Payroll-onboarding && yarn build",
+  "postinstall": "cd Frappe-US-Payroll-onboarding && yarn install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

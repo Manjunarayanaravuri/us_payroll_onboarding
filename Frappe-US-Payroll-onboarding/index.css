@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* 🟦 Define custom frappe color variables inside :root */
+:root {
+  --color-frappe-blue-500: #3b82f6;
+  --color-frappe-blue-600: #2563eb;
+  --color-frappe-blue-700: #1d4ed8;
+
+  --color-frappe-gray-50: #fafafa;
+  --color-frappe-gray-100: #f4f5f7;
+  --color-frappe-gray-200: #e5e7eb;
+  --color-frappe-gray-300: #d1d5db;
+  --color-frappe-gray-400: #9ca3af;
+  --color-frappe-gray-500: #6b7280;
+  --color-frappe-gray-600: #4b5563;
+  --color-frappe-gray-700: #374151;
+  --color-frappe-gray-800: #1f2937;
+  --color-frappe-gray-900: #111827;
+}
+
+/* 🧱 Define frappe custom utility classes in a valid @layer */
+@layer utilities {
+  .bg-frappe-blue-500 { background-color: var(--color-frappe-blue-500); }
+  .bg-frappe-blue-600 { background-color: var(--color-frappe-blue-600); }
+  .bg-frappe-blue-700 { background-color: var(--color-frappe-blue-700); }
+
+  .text-frappe-gray-500 { color: var(--color-frappe-gray-500); }
+  .text-frappe-gray-600 { color: var(--color-frappe-gray-600); }
+  .text-frappe-gray-700 { color: var(--color-frappe-gray-700); }
+}
