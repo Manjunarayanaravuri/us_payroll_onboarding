@@ -88,7 +88,6 @@ const Onboarding: React.FC = () => {
     let baseSteps: Step[] = [{ id: 'welcome', name: 'Welcome', subText: "Let's get started", formKey: null }];
     
     if (employee.employeeType === 'W2') {
-        baseSteps.push({ id: 'i9', name: 'I-9 Verification', subText: 'Employment Eligibility', formKey: 'i9Form' });
         baseSteps.push({ id: 'w4', name: 'Federal W-4', subText: 'Tax Withholding', formKey: 'federalW4' });
         
         let stateForm: Step | null = null;
@@ -296,30 +295,6 @@ const Onboarding: React.FC = () => {
 
 setErrors({});
 
-if (steps[currentStep].id === "i9" && onboardingData?.i9Form) {
-    try {
-      const payload = onboardingData.i9Form;
-      const res = await fetch("/api/method/us_payroll_onboarding.api.i9_form.create_basic_i9_form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "omit",
-        body: JSON.stringify({
-          employee: erpEmployeeName,
-          form_data: payload,
-          custom_employee_id: String(employee.id),
-        }),
-      });
-
-      const result = await res.json();
-      if (result.exc) throw new Error(result.exc);
-
-      console.log("✅ I9 Form created successfully:", result);
-      addToast("I-9 Form created in ERPNext!", "success");
-    } catch (error) {
-      console.error("❌ Failed to create I9 Form in ERPNext:", error);
-      addToast("Failed to sync I-9 Form with ERPNext.", "error");
-    }
-  }
 
   if (currentStep < steps.length - 1) {
     setCurrentStep(currentStep + 1);
